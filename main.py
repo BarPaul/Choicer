@@ -262,7 +262,7 @@ def info_command(message: types.Message):
         return bot.register_next_step_handler_by_chat_id(message.chat.id, answer_hard)
     elif message.text == "🏆 ТОП 10":
         top_message = "#\tНикнейм\tСчет"
-        top_10 = sorted(DATA.items(), key=lambda item: item[1]["points"], reverse=True)[:10]
+        top_10 = sorted(DATA.items(), key=lambda item: item[1]['points'], reverse=True)[:10]
         places = {0: "🥇", 1: "🥈", 2: "🥉"}
         for i in range(10):
             if i > len(top_10):
