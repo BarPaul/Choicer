@@ -1,6 +1,5 @@
 from os import getenv
 from datetime import datetime
-from keep_alive import keep_alive
 from pytz import timezone
 from logging import getLogger, INFO, basicConfig, Formatter
 from telebot import TeleBot, types
@@ -325,5 +324,4 @@ def info_command(message: types.Message):
 
 
 if __name__ == '__main__':
-  keep_alive()
   bot.infinity_polling(none_stop=True)
