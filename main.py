@@ -268,7 +268,7 @@ def info_command(message: types.Message):
             if i > len(top_10):
                 top_message += f"**{i+1}**\tПока еще никого\t0\n"
                 continue
-            top_message += f"**{places.get(i, i+1)}**\t{top_10[i][0]}\t{top_10[i][1]["point"]}\n"
+            top_message += f"**{places.get(i, i+1)}**\t{top_10[i][0]}\t{top_10[i][1]['point']}\n"
         return bot.reply_to(message, top_message)
 
 if __name__ == '__main__':
